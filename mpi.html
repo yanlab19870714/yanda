@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>YAN, Da -- Blog on MPI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel=stylesheet type="text/css" href="css/menu.css">
+</head>
+
+<body>
+
+<table width="100%" height="100%">
+		<tr><td height="100px" align="center">
+			<div id="nav"><ul>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='home.html'">Home</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='research.html'">Research Interests</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='publication.html'">Publications</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='teach.html'">Teaching</li>
+			</ul></div>
+		</td></tr>
+		<tr><td><table width="100%" height="100%"><tr>
+			<td width="12%"></td>
+			<td valign="top" align="center" width="76%">
+			<DIV class=style>
+				<P class=paragraph_style style="PADDING-TOP: 0pt">The MPI Pitfall: How to Use MPI for Distributed Systems Research?<BR></P>
+				<P class=paragraph_style_1><BR></P>
+			</DIV>
+
+			<DIV class=style_3>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				MPI is my desired (and recommended) tool for programming a distributed system. Compared with socket programming, or even ZeroMQ, MPI avoids the burden of manually maintaining communication processes and taking care of low-level details like port numbers. MPI is also mature and native performance is guaranteed.
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				However, I find two key pitfalls of MPI that may discourage new comers from using MPI to develop a big system: (1) MPI_Alltoall(v) does not scale with the number of processes (tested on both MPICH and Open MPI), though the reason is not clear. <b>Never use MPI_Alltoall(v)</b>, and if you need it, implement one of your own like in my Pregel+ code. (2) <b>If you have mutiple threads in a process communicating</b>, you should <b>use MPI_Init_thread</b> to initiate your process, and <b>never use collective communication primitives</b> since they do not admit an MPI "tag" (indicating an independent communication channel) and may interfere with your point-to-point communication! If you need it, implement your own version using point-to-point communication primitives with your self-managed "tag". BTW, I really think collective communication primitives should take a tag, and this is a flaw of MPI standard that may not be able to evolve... the community was not taking multithreading into consideration at the beginning.
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				With the above two pitfalls in mind, you will be able to avoid them (and frustration) and freely use MPI for developing big distributed systems! Two tips: (1) fine-grained multithreading in a process is very useful, and you should definitely learning C++11 multithreading concepts like std::thread, std::mutex, std::condition_variable, std::atomic<T>, and even lambda function; (2) MPI does not provide a mechanism for interruption, so to avoid busy waiting, you have to use nonblocking promitives (e.g., MPI_Isend + MPI_Test) and if there is nothing to do, call sleep/usleep to sleep for a short amount of (polling) time like 100ns to avoid 100% CPU occupation.
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				Now, you are ready to use MPI to develop whatever distributed systems in your mind :-), note that you can still benefit from Hadoop Ecosystem since libhdfs provides a C API to HDFS (storage layer), and your computation engine can enjoy the native performance of C/C++ without a virtual machine (required by Java, Scala, etc.). Enjoy the faster IO, smaller memory footprint of C/C++ if you are good at it ^_^
+			</P>
+
+			<BR><BR><BR>
+
+			</DIV>
+
+			</td>
+			<td width="12%"></td>
+		</tr></table></td></tr>
+</table>
+
+</body>
+
+</html>

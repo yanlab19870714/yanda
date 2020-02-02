@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>YAN, Da -- Blog on MPI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel=stylesheet type="text/css" href="css/menu.css">
+</head>
+
+<body>
+
+<table width="100%" height="100%">
+		<tr><td height="100px" align="center">
+			<div id="nav"><ul>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='home.html'">Home</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='research.html'">Research Interests</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='publication.html'">Publications</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='teach.html'">Teaching</li>
+			</ul></div>
+		</td></tr>
+		<tr><td><table width="100%" height="100%"><tr>
+			<td width="12%"></td>
+			<td valign="top" align="center" width="76%">
+			<DIV class=style>
+				<P class=paragraph_style style="PADDING-TOP: 0pt">All-Pairs Communication: How to Ensure High Network Bandwidth Utilization?<BR></P>
+				<P class=paragraph_style_1><BR></P>
+			</DIV>
+
+			<DIV class=style_3>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				In distributed computing, all-pairs communication is common where each machine needs to constantly send/receive data to/from every other machine. For example, message shuffling in MapReduce and Google's Pregel is an all-pairs communication. However, it is challenging to design an MPI-based all-pairs communication module that is able to fully utilize the network bandwidth, due to many unexpected behaviors of MPI.
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				We consider an example where each machine needs to constantly request data from other machines. We consider two solutions: <b>(S1) all-to-all style</b> synchronous message shuffling, and <b>(S2) server-style</b> message receiving, where a request/response server listens on its channel, and keeps processing each received request/response (from MPI_ANY_SOURCE).
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				For (S1) all-to-all style communication, we cannot use MPI_Alltoall/MPI_Alltoallv since (1) it does not scale with the number of processes somehow in both MPICH and Open MPI, and (2) they do not take a tag as input and so may interfere with other concurrent MPI communications (see the two MPI pitfalls mentioned <a href="mpi.html" target="_blank">here</a>). We thus implement the determinstic synchronous all-to-all communication using MPI point-to-point communication primitives, and the code can be found <a href="https://github.com/yanlab19870714/MPI-All-Pairs-Communication/tree/master/all_to_all" target="_blank">here</a>. There, as a simulation, we first let all processes (one on each machine) send a request of size <i>BUF_SIZE</i> to every other worker process using a synchronous all-to-all communication, and then let all workers send a response of size <i>fold * BUF_SIZE</i> back to every other worker process using a second synchronous all-to-all communication. The above two steps are repeated and the cumulative volume of received responses are periodically reported on the console, which reflects the communication throughput. Unfortunately, in a Gigabit Ethernet environment with 16 machines, we observe that this solution only delivers a throughput of around 100Mbps (i.e., 10% utilization rate), even though the communication volume is totally balanced.
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				Alternatively, for (S2) server-style communication, we maintain a request server and a response server. A server listens on its channel (using MPI_Iprobe) and processes each received message. However, since a request has size <i>BUF_SIZE</i> but a response has size <i>fold * BUF_SIZE</i> which is <i>fold</i> times larger, if we keep the requesting channel busy, the response channel will become congested (note that this will not happen for the all-to-all styple communication). We observe that if requests are kept being sent, the communication will become very unbalanced and the throughput drops to almost 0 between many pairs of machines, and gradually there is almost no progress in communication for all machines (not sure why, and may be relevant to the implementation of MPICH). However, when congestion does not happen, the throughput is many times higher than the all-to-all styple communication.
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				To ensure network throughput but avoid congestion, our solution is to <b>let each machine sleep for a while after sending a batch of messages to every other machine</b> and the code can be found <a href="https://github.com/yanlab19870714/MPI-All-Pairs-Communication/tree/master/server_mode" target="_blank">here</a>. Obviously, the throughput is inversely proportional to the sleep time. Interestingly, by varying the number of processes, we find that the network throughput increases linearly with the number of processes. Thus, when a program is run with many processes/machines, the estimated throughput will go beyond 1Gbps and congestion happens. In fact, while congestion does not happen in our private cluster when the throughput is above 100MB/s, we find that on Azure, it is safer to control the throughput to be around 60MB/s or congestion may happen. Also, this holds only when <i>BUF_SIZE</i> is 1kB (we set <i>fold</i> as 100 and so the volume of a batch of response messages is 100kB), and if the message batch becomes larger, congestion also happens. As a result, to avoid congestion, we try to keep the largest volume of a batch of messages to be around 100kB, and increase the sleep time proportionally to the number of processes to keep the throughput at around 60MB/s. This strategy has been integrated into our <a href="https://info.cs.uab.edu/yanda/gthinker/" target="_blank">G-thinker</a> system.
+			</P>
+
+			<BR><BR><BR>
+
+			</DIV>
+
+			</td>
+			<td width="12%"></td>
+		</tr></table></td></tr>
+</table>
+
+</body>
+
+</html>

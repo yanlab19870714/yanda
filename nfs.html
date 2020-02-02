@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>YAN, Da -- Blog on Mounting a Network File System</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel=stylesheet type="text/css" href="css/menu.css">
+</head>
+
+<body>
+
+<table width="100%" height="100%">
+		<tr><td height="100px" align="center">
+			<div id="nav"><ul>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='home.html'">Home</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='research.html'">Research Interests</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='publication.html'">Publications</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='teach.html'">Teaching</li>
+			</ul></div>
+		</td></tr>
+		<tr><td><table width="100%" height="100%"><tr>
+			<td width="12%"></td>
+			<td valign="top" align="center" width="76%">
+			<DIV class=style>
+				<P class=paragraph_style style="PADDING-TOP: 0pt">How to Mount a Network File System?<BR></P>
+				<P class=paragraph_style_1><BR></P>
+			</DIV>
+
+			<DIV class=style_3>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				We assume that you have the root privilege (sudo) on the machines, and you want to mount the path, such as /home, at Machine A, to Machine B under the same path /home.
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				Step 1: on Machine A, type "sudo vi /etc/exports" and add "/home           machine_B_ip(rw,sync,no_root_squash,no_subtree_check)"
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				Step 2: on Machine A, type "sudo exportfs -r"
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				Step 3: on Machine B, if you see /home already there, we can rename it to sth else (sudo mv /home /home_bak), and go to Step 5 directly if it says "Device or resource busy"
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				Step 4: on Machine B, type "sudo mkdir /home"
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				Step 5: on Machine B, type "sudo mount -t nfs machine_A_ip:/home /home"
+			</P>
+
+			<BR><BR><BR>
+
+			</DIV>
+
+			</td>
+			<td width="12%"></td>
+		</tr></table></td></tr>
+</table>
+
+</body>
+
+</html>

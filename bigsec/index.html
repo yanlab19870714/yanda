@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Big Data Security (BigSec)</title>
+
+<link rel="stylesheet" id="bootstrap-css-css" href="lib/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="frontend_main-css-css" href="lib/frontend_main.css" type="text/css" media="all">
+<link rel="stylesheet" id="social-icons-widget-widget-css" href="lib/social_icons_widget.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentysixteen-fonts-css" href="lib/css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="lib/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentysixteen-style-css" href="lib/style.css" type="text/css" media="all">
+
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="lib/js"></script>
+<script type="text/javascript" src="lib/init_map.js"></script>
+<script type="text/javascript" src="lib/frontend_main.js"></script>
+
+<style type="text/css" id="wp-custom-css">
+
+.icdeparagraph {
+text-align: justify;
+}
+
+.site-title {
+  text-align: center;
+  margin-left: 30px;
+  vertical-align: top;
+  display: inline;
+}
+
+span.site-title {
+   margin-left: 0px;
+}
+
+div.site-branding {
+  margin-bottom: 0px !important;
+}
+
+.custom-logo-link {
+  display: inline;
+}
+
+p.site-title a {
+ font-size: 2.5rem !important;
+ font-weight: bold;
+}
+
+a[href="https://wordpress.org/"]{ visibility: hidden; }
+
+div.header-image {
+ margin-top: 0px !important;
+}
+
+#masthead {
+ padding-bottom: 37px !important;
+}
+
+div.site-info {
+ width: 385px;
+ overflow: hidden;
+ height: 25px;
+}
+
+#vicechairs {
+  width: 100%;
+  border: 0px;
+}
+
+#vicechairs tbody tr td {
+  border: 0px;
+}
+
+#vicechairs thead tr th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+#hotels {
+  width: 100%;
+  text-align: center;
+}
+
+#thhotelsname {
+  width: 40%;
+}
+
+#hotels thead tr th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+#hotels tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+}
+ul, ol{
+  padding-left: 20px !important;
+}
+
+table.sightseeing {
+  border: none;
+}
+
+table.sightseeing tr{
+  border: none;
+}
+
+table.sightseeing tr td {
+  border: none;
+}
+
+
+table.sightseeing tbody tr td{
+  text-align: center;
+}
+
+#colophon .site-info {
+  min-width: 370px;
+}
+
+ul.importantdates {
+list-style-type: none;
+}
+
+#researchpc {
+  width: 100%;
+  border: 0px;
+}
+
+
+#researchpc tbody tr td{
+  border: 0px;
+}
+
+#researchpc tbody tr td:nth-child(1) {
+  width: 35%;
+}
+
+#researchpc tbody tr td:nth-child(2) {
+  width: 65%;
+}
+
+.site-description {
+    margin-left: 160px; 
+    margin-top: -25px;
+    margin-bottom: 10px;
+}
+
+p.site-description {
+	font-size: 1.25rem;
+}
+
+#twitter-follow-3 { 
+  margin-bottom: 5px;
+}
+
+#text-11 {
+ margin-bottom: 15px;
+}
+
+.twitter-timeline-profile {
+  max-height: 225px !important;
+  overflow: scroll;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 1280px) {    
+  p.site-title a {
+   font-size: 2.5rem !important;
+   font-weight: normal;
+ }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 800px) { 
+   .site-description {
+      display: none;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+ 
+}
+
+del{
+color : red;
+font-weight: bold;
+}
+
+.organizers{
+margin-top: 0px;
+margin-bottom: 25px;
+}
+
+h5 {
+margin-bottom: 0px !important;
+}
+
+h6 {
+	margin-bottom:5px !important;
+	font-style: normal !important;
+	line-height: 175% !important;
+}
+
+a.btn {
+    display: inline-block;
+    font-weight: bold;
+    width: auto;
+    color: #fff;
+    background-color: #02A99C;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: ease all 0.5s;
+}
+
+a.btn:hover, a.btn:focus {
+    background: #FCB027;
+    border: none;
+}
+
+</style>
+
+<script type="text/javascript" charset="utf-8" async="" src="lib/button.5f64a1a5864e1229f84c8defd65341b4.js"></script><script type="text/javascript" charset="utf-8" async="" src="lib/timeline.25e3f797ea5047ab5a8d06fd6ee7f701.js"></script><script type="text/javascript" charset="UTF-8" src="lib/common.js"></script><script type="text/javascript" charset="UTF-8" src="lib/util.js"></script><script type="text/javascript" charset="UTF-8" src="lib/stats.js"></script></head>
+
+<body class="home page-template-default page page-id-30 page-parent wp-custom-logo" data-gr-c-s-loaded="true">
+<div id="page" class="site">
+	<div class="site-inner">
+
+<header id="masthead" class="site-header" role="banner">
+	<div class="site-header-main">
+		<div class="site-branding">
+			<a href="index.html" class="custom-logo-link" rel="home" itemprop="url"><img width="300" src="img/logo.png" class="custom-logo" alt="G-thinker" itemprop="logo"></a>
+				<p class="site-title"><a href="index.html" rel="home">BigSec Educational Projects</a></p>
+		</div><!-- .site-branding -->
+  </div><!-- .site-header-main -->
+</header><!-- .site-header -->
+
+
+
+
+<div id="content" class="site-content">
+<div id="primary" class="content-area">
+<main id="main" class="site-main" role="main">
+		
+<article id="post-30" class="post-30 page type-page status-publish hentry">
+
+<header class="entry-header"><h1 class="entry-title">Welcome to BigSec!</h1></header><!-- .entry-header -->
+
+	
+
+<div class="entry-content">
+
+<p class="icdeparagraph">
+Big data requires "bigger responsibility" in terms of protecting the storage, sharing, and access of the privacy-sensitive data. The goal of this website is to share some projects developed based on a new pedagogy, called Captivology-Stimuli-based Learning (CAPITAL), for active education and training on big data security and privacy (BigSec). CAPITAL follows a project-driven approach which emphasizes on hands-on experiences to keep students' interest in the course subjects. The project is supported by NSF Award #1723250.
+</p>
+
+<p class="icdeparagraph">
+Below, we share 3 course projects related to big data security and privacy, which have been successfully used as mini-project assignments in "CS 485/685/785: Data Science Foundations" offered at the Department of Computer Science, The University of Alabama at Birmingham. The evaluation results can be found <a href="idea_survey_spring19.pdf" target="_blank">here</a>. Solution to the projects can be requested by instructors, by sending emails to <a href="mailto:yanda@uab.edu">yanda@uab.edu</a>.
+</p>
+
+<h2 class="entry-title">CAPTCHAS Attack by Deep Learning</h2>
+
+<p class="icdeparagraph">
+This project shows how advancement of data science deprecating security technologies. Here, the data science advancement is deep learning, and the security technology is CAPTCHA.
+<br>
+[<a href="captchas/captchas.pptx" target="_blank">Course PPT</a>], [<a href="captchas/captchas.pdf" target="_blank">Project Description</a>], [<a href="captchas/captchas.zip" target="_blank">Assignment Files</a>]
+<br><br>
+<img width="500" src="img/cap.png">
+</p>
+
+<h2 class="entry-title">ConvNet Adversarial Attacks</h2>
+
+<p class="icdeparagraph">
+This project shows how a data science technique itself may not robust to security attacks. Here, the data science advancement is deep learning, and the security technology is data perturbation.
+<br>
+[<a href="fool/fool.pptx" target="_blank">Course PPT</a>], [<a href="fool/fool.pdf" target="_blank">Project Description</a>], [<a href="fool/fool.zip" target="_blank">Assignment Files</a>]
+<br><br>
+<img width="360" src="img/fool.png">
+</p>
+
+<h2 class="entry-title">Anonimity and Differential Privacy</h2>
+
+<p class="icdeparagraph">
+This project introduces the concept of various techinques for privacy preseving data publishing, such as <i>k</i>-anonymity, <i>l</i>-diversity, <i>t</i>-closeness, <i>ϵ</i>-differential privacy, etc.
+<br>
+[<a href="privacy/privacy.pptx" target="_blank">Course PPT</a>], [<a href="privacy/privacy.pdf" target="_blank">Project Description</a>], [<a href="privacy/privacy.zip" target="_blank">Assignment Files</a>]
+<br><br>
+<img width="540" src="img/privacy.png">
+</p>
+
+</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+</main><!-- .site-main -->
+</div><!-- .content-area -->
+
+
+
+<aside id="secondary" class="sidebar widget-area" role="complementary">
+
+<section id="text-12" class="widget widget_text">
+<h2 class="widget-title">Contact</h2>
+<div class="textwidget">
+<h4>
+<p>
+Da Yan [<a href="http://www.cs.uab.edu/yanda" target="_blank">Website</a>]
+<p>Email: <a href="mailto:yanda@uab.edu">yanda@uab.edu</a></p>
+<p>Assistant Professor</p>
+<p>Department of Computer Science</p>
+<p>University of Alabama at Birmingham</p>
+
+</h4>
+</div>
+</section>
+
+<section id="text-12" class="widget widget_text">
+<h2 class="widget-title">Sponsors</h2>
+<div class="textwidget">
+<h4>
+<input type="image" width="120" src="img/nsf.png" style="cursor:pointer" onMouseover= "this.style.opacity=0.6" onMouseout= "this.style.opacity=1" onclick ="window.open('https://www.nsf.gov/awardsearch/showAward?AWD_ID=1723250&HistoricalAwards=false')"/>
+<p></p>
+<input type="image" width="280" src="img/ua.png" style="cursor:pointer" onMouseover= "this.style.opacity=0.6" onMouseout= "this.style.opacity=1" onclick ="window.open('https://www.ua.edu/')"/>
+<p><br></p>
+<input type="image" width="280" src="img/cslogo.png" style="cursor:pointer" onMouseover= "this.style.opacity=0.6" onMouseout= "this.style.opacity=1" onclick ="window.open('https://www.uab.edu/cas/computerscience/')"/>
+</h4>
+</div>
+</section>
+
+</aside><!-- .sidebar .widget-area -->
+</div><!-- .site-content -->
+
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+			
+<div class="site-info">
+	<span class="site-title"><a href="index.html" rel="home">Captivology-Stimuli-based Learning of Big Data Security (BigSec)</a></span>
+</div><!-- .site-info -->
+
+</footer><!-- .site-footer -->
+</div><!-- .site-inner -->
+</div><!-- .site -->
+
+<script type="text/javascript" src="lib/skip-link-focus-fix.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="lib/functions.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+window.twttr=(function(w){t=w.twttr||{};t._e=[];t.ready=function(f){t._e.push(f);};return t;}(window));
+/* ]]> */
+</script>
+<script type="text/javascript" id="twitter-wjs" async="" defer="" src="lib/widgets.js" charset="utf-8"></script>
+<script type="text/javascript" src="lib/wp-embed.min.js"></script>
+
+</body>
+</html>

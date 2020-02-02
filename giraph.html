@@ -1,0 +1,94 @@
+<html>
+<head>
+	<title>YAN, Da -- Blog on Giraph</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel=stylesheet type="text/css" href="css/menu.css">
+</head>
+
+<body>
+
+<table width="100%" height="100%">
+		<tr><td height="100px" align="center">
+			<div id="nav"><ul>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='home.html'">Home</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='research.html'">Research Interests</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='publication.html'">Publications</li>
+				<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'" onclick="window.location.href='teach.html'">Teaching</li>
+			</ul></div>
+		</td></tr>
+		<tr><td><table width="100%" height="100%"><tr>
+			<td width="12%"></td>
+			<td valign="top" align="center" width="76%">
+			<DIV class=style>
+				<P class=paragraph_style style="PADDING-TOP: 0pt">How to make Giraph run?<BR></P>
+				<P class=paragraph_style_1><BR></P>
+			</DIV>
+
+			<DIV class=style_3>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				Apache Giraph is the best known Pregel-like system and if you work on the related topic, paper reviewers will definitely ask you to compare with Giraph (so maybe you want to do it before they ask). 
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				Unfortunately, the documentation is scarce and it is not uncommon that people struggle to make it work. This tutorial aims to reduce your time investment in making Giraph work.
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				A Giraph deployment tutorial that Works can be found <a href="http://lab.hypotheses.org/1207" target="_blank">here</a>, which uses Hadoop v2.5.1 and Giraph v1.1.0. Put simply, you go to GIRAPH_HOME and use maven to compile, and a giraph-xxxxxx-dependencies.jar will be generated under $GIRAPH_HOME/giraph-examples/target. That jar-file is the one you need to run using "hadoop jar".
+			</P>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				To run it, you need to specify options like
+				<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;-vip: vertex-input-format, i.e. adjacecy list format
+				<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;-eip: edge-input-format, i.e. each line is "src dst"
+				<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;-vof, -eof: vertex/edge-output-format
+				<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;-op: output-path
+				<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;-w: number of workers run
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				This is not the end of the story yet... your job may stuck for a while and then fail. Giraph is using a lot of memory and the default memory constraints are often too small.
+			</P>
+
+			<BR>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				If this happens, record your job ID, check its Hadoop job log. If at the end of the log you see "Error: GC overhead limit exceeded", check <a href="https://issues.apache.org/jira/browse/GIRAPH-234"  target="_blank">here</a>. Put simply, you need to add another option:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;-Dmapred.child.java.opts=-Xmx4000m
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;-Dmapred.child.java.opts=-Xms4000m
+				<br>
+				where 4000m means 4GB memory and you may further increase it according to your machine's memory size.
+			</P>
+
+			<P class=paragraph_style_3 style="PADDING-TOP: 0pt">
+				You may further add more options listed <a href="http://giraph.apache.org/options.html" target="_blank">here</a>, like giraph.numComputeThreads and giraph.SplitMasterWorker. For example, the previously-mentioned <a href="http://lab.hypotheses.org/1207"  target="_blank">tutorial</a> uses:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp; -ca giraph.SplitMasterWorker=false
+			</P>
+
+			<BR><BR><BR>
+
+			</DIV>
+
+			</td>
+			<td width="12%"></td>
+		</tr></table></td></tr>
+</table>
+
+</body>
+
+</html>
