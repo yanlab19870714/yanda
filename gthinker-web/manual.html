@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>G-thinker</title>
+
+<link rel="stylesheet" id="bootstrap-css-css" href="lib/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="frontend_main-css-css" href="lib/frontend_main.css" type="text/css" media="all">
+<link rel="stylesheet" id="social-icons-widget-widget-css" href="lib/social_icons_widget.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentysixteen-fonts-css" href="lib/css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="lib/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentysixteen-style-css" href="lib/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="lib/prism.css" type="text/css" media="all">
+
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="lib/js"></script>
+<script type="text/javascript" src="lib/init_map.js"></script>
+<script type="text/javascript" src="lib/frontend_main.js"></script>
+<script type="text/javascript" src="lib/prism.js"></script>
+
+<style type="text/css" id="wp-custom-css">
+
+.icdeparagraph {
+text-align: justify;
+}
+
+.site-title {
+  text-align: center;
+  margin-left: 30px;
+  vertical-align: top;
+  display: inline;
+}
+
+span.site-title {
+   margin-left: 0px;
+}
+
+div.site-branding {
+  margin-bottom: 0px !important;
+}
+
+.custom-logo-link {
+  display: inline;
+}
+
+p.site-title a {
+ font-size: 2.5rem !important;
+ font-weight: bold;
+}
+
+a[href="https://wordpress.org/"]{ visibility: hidden; }
+
+div.header-image {
+ margin-top: 0px !important;
+}
+
+#masthead {
+ padding-bottom: 37px !important;
+}
+
+div.site-info {
+ width: 385px;
+ overflow: hidden;
+ height: 25px;
+}
+
+#vicechairs {
+  width: 100%;
+  border: 0px;
+}
+
+#vicechairs tbody tr td {
+  border: 0px;
+}
+
+#vicechairs thead tr th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+#hotels {
+  width: 100%;
+  text-align: center;
+}
+
+#thhotelsname {
+  width: 40%;
+}
+
+#hotels thead tr th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+#hotels tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+}
+ul, ol{
+  padding-left: 20px !important;
+}
+
+table.sightseeing {
+  border: none;
+}
+
+table.sightseeing tr{
+  border: none;
+}
+
+table.sightseeing tr td {
+  border: none;
+}
+
+
+table.sightseeing tbody tr td{
+  text-align: center;
+}
+
+#colophon .site-info {
+  min-width: 370px;
+}
+
+ul.importantdates {
+list-style-type: none;
+}
+
+#researchpc {
+  width: 100%;
+  border: 0px;
+}
+
+
+#researchpc tbody tr td{
+  border: 0px;
+}
+
+#researchpc tbody tr td:nth-child(1) {
+  width: 35%;
+}
+
+#researchpc tbody tr td:nth-child(2) {
+  width: 65%;
+}
+
+.site-description {
+    margin-left: 160px; 
+    margin-top: -25px;
+    margin-bottom: 10px;
+}
+
+p.site-description {
+	font-size: 1.25rem;
+}
+
+#twitter-follow-3 { 
+  margin-bottom: 5px;
+}
+
+#text-11 {
+ margin-bottom: 15px;
+}
+
+.twitter-timeline-profile {
+  max-height: 225px !important;
+  overflow: scroll;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 1280px) {    
+  p.site-title a {
+   font-size: 2.5rem !important;
+   font-weight: normal;
+ }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 800px) { 
+   .site-description {
+      display: none;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+ 
+}
+
+del{
+color : red;
+font-weight: bold;
+}
+
+.organizers{
+margin-top: 0px;
+margin-bottom: 25px;
+}
+
+h5 {
+margin-bottom: 0px !important;
+}
+
+h6 {
+	margin-bottom:5px !important;
+	font-style: normal !important;
+	line-height: 175% !important;
+}
+
+a.btn {
+    display: inline-block;
+    font-weight: bold;
+    width: auto;
+    color: #fff;
+    background-color: #02A99C;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: ease all 0.5s;
+}
+
+a.btn:hover, a.btn:focus {
+    background: #FCB027;
+    border: none;
+}
+
+</style>
+
+<script type="text/javascript" charset="utf-8" async="" src="lib/button.5f64a1a5864e1229f84c8defd65341b4.js"></script><script type="text/javascript" charset="utf-8" async="" src="lib/timeline.25e3f797ea5047ab5a8d06fd6ee7f701.js"></script><script type="text/javascript" charset="UTF-8" src="lib/common.js"></script><script type="text/javascript" charset="UTF-8" src="lib/util.js"></script><script type="text/javascript" charset="UTF-8" src="lib/stats.js"></script></head>
+
+<body class="home page-template-default page page-id-30 page-parent wp-custom-logo" data-gr-c-s-loaded="true">
+<div id="page" class="site">
+	<div class="site-inner">
+
+<header id="masthead" class="site-header" role="banner">
+	<div class="site-header-main">
+		<div class="site-branding">
+			<a href="index.html" class="custom-logo-link" rel="home" itemprop="url"><img width="120" src="img/logo.png" class="custom-logo" alt="G-thinker" itemprop="logo"></a>
+				<p class="site-title"><a href="index.html" rel="home">Think Like a Subgraph</a></p>
+				<p class="site-description">A User-Friendly Parallel Graph Mining System</a></p>
+		</div><!-- .site-branding -->
+
+<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+<div id="site-header-menu" class="site-header-menu">
+<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+<div class="menu-main-container"><ul id="menu-main" class="primary-menu">
+
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-30 current_page_item menu-item-has-children menu-item-33" aria-haspopup="true"><a href="index.html">Home</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+  <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="index.html">G-thinker Home</a></li>
+</ul>
+</li>
+
+<li id="menu-item-173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-173" aria-haspopup="true"><a href="system.html">Downloads</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="system.html">System Code</a></li>
+	<li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="toy.html">Datasets</a></li>
+	<li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="app.html">Application Code</a></li>
+</ul>
+</li>
+
+<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52" aria-haspopup="true"><a href="deploy.html">Doumentation</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+	<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="deploy.html">How to Deploy</a></li>
+	<li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="run.html">How to Run</a></li>
+	<li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="manual.html">How to Program</a></li>
+  <li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="api.html">The Complete API</a></li>
+</ul>
+</li>
+
+<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-62" aria-haspopup="true"><a href="team.html">Team &amp; Contact</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="team.html">Core Team</a></li>
+	<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="others.html">Other Contributors</a></li>
+</ul>
+</li>
+
+</ul></div>
+
+</nav><!-- .main-navigation -->
+</div><!-- .site-header-menu -->
+</div><!-- .site-header-main -->
+
+</header><!-- .site-header -->
+
+
+
+
+<div id="content" class="site-content">
+<div id="primary" class="content-area">
+<main id="main" class="site-main" role="main">
+		
+<article id="post-30" class="post-30 page type-page status-publish hentry">
+
+<header class="entry-header"><h1 class="entry-title">Writing a G-thinker Program</h1></header><!-- .entry-header -->
+
+	
+
+<div class="entry-content">
+
+<p class="icdeparagraph">
+Other Documentations: [<a href="deploy.html">How to Deploy</a>], [<a href="run.html">How to Run</a>], [<a href="api.html">The Complete API</a>]
+</p>
+
+<h1 class="entry-title">Programming Model Overview</h1>
+
+<p class="icdeparagraph">
+G-thinker loads an input graph from Hadoop Distributed File System (HDFS) by partitioning vertices (along with their adjacency lists) among the memory of different machines, forming a distributed key-value store: one may request for a vertex <i>v</i>'s adjacency lists by providing <i>v</i>'s vertex ID. We say that one <b>pulls</b> <i>v</i> in this case.
+</p>
+
+<p class="icdeparagraph">
+G-thinker performs computation on subgraphs. Each subgraph <i>g</i> is associated with a <b>task</b> which performs computation on <i>g</i> and expands <i>g</i> by "pulling" adjacent vertices as needed. Tasks are spawned from individual vertices.
+</p>
+
+<p class="icdeparagraph">
+Different tasks are independent, while each task <i>t</i> performs computation in iterations, so that if it is waiting for responses of its pull-requests after an iteration, <i>t</i> will be hanged up to allow a CPU core to process other tasks. Another iteration of <i>t</i> will be scheduled for processing once all its responses are received.
+</p>
+
+<p class="icdeparagraph">
+G-thinker runs one process called <b>worker</b> on each machine, which in turn runs multiple computing threads called <b>compers</b> to process tasks. Each comper maintains a queue of tasks waiting to be processed by it, but tasks may be spilled to local disk(s) if the task queue becomes full.
+</p>
+
+<h1 class="entry-title">User-Defined Types and Functions</h1>
+
+<p class="icdeparagraph">
+To write a G-thinker program, one needs to be aware of some system-provided classes, which can be divided into two types.
+</p>
+
+<p class="icdeparagraph">
+One type of class only requires users to specify data types of their application using C++ template arguments, and one may rename his/her customized class using "typedef" for ease of later use.
+</p>
+
+<p class="icdeparagraph">
+The other type of class additionally has virtual functions that need users to implement according to the application logic. For this kind of class, one needs to (1) subclass the base class, (2) specify the data types using C++ template arguments, and (3) implement the virtual functions.
+</p>
+
+<p class="icdeparagraph">
+We now introduce these classes, some of which are summarized in the diagram below.
+<br><br>
+<img src="img/api.png" width="680" />
+</p>
+
+<p class="icdeparagraph">
+A checklist of the classes is provided below:
+<ul>
+  <li>
+    <a href="#Lvertex">Vertex</a>
+  </li>
+  <li>
+    <a href="#Lsubg">Subgraph</a>
+  </li>
+  <li>
+    <a href="#Ltask">Task</a>
+  </li>
+  <li>
+    <a href="#Lcomper">Comper</a>
+  </li>
+  <li>
+    <a href="#Lworker">Worker</a>
+  </li>
+  <li>
+    <a href="#Ltrim">Trimmer</a>
+  </li>
+  <li>
+    <a href="#Lagg">Aggregator</a>
+  </li>
+</ul>
+</p>
+
+<h3 id="Lvertex" class="entry-title">Vertex</h3>
+
+<p class="icdeparagraph">
+The <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Vertex.h" target="_blank">Vertex</a> class is for users to specify the type of a vertex’s ID, and the type of its content (e.g., adjacency list). It has three template arguments: (1) <b>&lt;KeyT&gt;</b>, the type of vertex ID; (2) <b>&lt;ValueT&gt;</b>, the type of vertex content that typically includes an adjacency list; (3) <b>&lt;HashT&gt;</b>, the vertex-partitioning function that hashes a vertex ID of type &lt;KeyT&gt; to a worker ID.
+</p>
+
+<p class="icdeparagraph">
+Normally, &lt;KeyT&gt; is specified as the type <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/util/global.h#L165" target="_blank">VertexID</a>, which is <b>int</b> by default. If this is the case, a default &lt;HashT&gt; will be used and so users do not need to specify it. Users may use <b>typedef</b> to rename a customized Vertex class like in Lines 22 and 23 of our <i>Triangle Counting</i> application <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L22" target="_blank">here</a>, where &lt;ValueT&gt; is of type std::vector&lt;VertexID&gt;.
+</p>
+
+<p class="icdeparagraph">
+Each vertex object has two fields that can be used by users, (1) <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Vertex.h#L42" target="_blank">id</a>, which is the vertex ID of type &lt;KeyT&gt;, and (2) <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Vertex.h#L43" target="_blank">value</a>, which is typically the adjacency list of user-defined type &lt;ValueT&gt;.
+</p>
+
+<h3 id="Lsubg" class="entry-title">Subgraph</h3>
+
+<p class="icdeparagraph">
+The <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Subgraph.h" target="_blank">Subgraph</a> class provides the abstraction of a subgraph, and users need to specify the vertex type in the template argument <b>&lt;VertexT&gt;</b>. See Line 24 of our <i>Triangle Counting</i> application <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L24" target="_blank">here</a> for an example.
+</p>
+
+<p class="icdeparagraph">
+Each subgraph object maintains a vertex array <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Subgraph.h#L31" target="_blank">vertexes</a> where each element is of type <b>&lt;VertexT&gt;</b>, and one may iterate through the vertices of a subgraph using this field.
+</p>
+
+<p class="icdeparagraph">
+To add a vertex to a subgraph, one may call the function <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Subgraph.h#L33" target="_blank">addVertex(v)</a> which appends a copy of <i>v</i> including its ID and value to the end of the vertex array <i>vertexes</i>. Please do not directly update the field <i>vertexes</i> (i.e., read-only), since the subgraph object internally maintains a hash table <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Subgraph.h#L30" target="_blank">vmap</a> for looking up a vertex by its vertex ID.
+</p>
+
+<p class="icdeparagraph">
+To get a vertex with ID <i>id</i> from a subgraph, one may call the function <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Subgraph.h#L44" target="_blank">getVertex(id)</a>, which returns a pointer to the corresponding vertex object in the array <i>vertexes</i>, or NULL if such a vertex is not in the subgraph.
+</p>
+
+<p class="icdeparagraph">
+If one just needs to check whether a vertex with ID <i>id</i> exists in a subgraph, one may call the function <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Subgraph.h#L40" target="_blank">hasVertex(id)</a> which returns a boolean indicator. Since the behavior of our <b>addVertex(v)</b> function is undefined if the same vertex is added more than once, one may call <b>hasVertex(id)</b> to make sure that a vertex is not already added before adding it.
+</p>
+
+<h3 id="Ltask" class="entry-title">Task</h3>
+
+<p class="icdeparagraph">
+The <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Task.h" target="_blank">Task</a> class provides the abstraction of a task that processes a subgraph. It maintains two fields: (1) a subgraph <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Task.h#L47" target="_blank">subg</a> of type <i>Subgraph&lt;VertexT&gt;</VertexT></i>, (2) a <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Task.h#L48" target="_blank">context</a> object for keeping any additional information that users want to maintain in a task.
+</p>
+
+<p class="icdeparagraph">
+Accordingly, the Task class takes two user-specified data types in its template arguments: (1) <b>&lt;VertexT&gt;</b>, which indicates the vertex data type for the task's subgraph, and (2) <b>&lt;ContextT&gt;</b>, which is optional (does not need to be specified if unused), and which indicates the data type of the task's <i>context</i> object. See Line 25 of our <i>Triangle Counting</i> application <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L25" target="_blank">here</a> for an example.
+</p>
+
+<p class="icdeparagraph">
+Users may call a task object's <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Task.h#L81" target="_blank">pull(id)</a> function to request for the vertex whose ID is <i>id</i> (along with its adjacency list) for use in the next iteration of the task's computation. See Line 93 of our <i>Triangle Counting</i> application <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L93" target="_blank">here</a> for an example.
+</p>
+
+<h3 id="Lcomper" class="entry-title">Comper</h3>
+
+<p class="icdeparagraph">
+The <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Comper.h" target="_blank">Comper</a> class provides the abstraction of a task-computing thread, and each machine runs multiple compers. This is the most important class that provides virtual functions for users to implement the applicatin logic.
+</p>
+
+<p class="icdeparagraph">
+The Comper class takes two user-specified data types in its template arguments: (1) <b>&lt;TaskT&gt;</b>, which takes the user-specified data type for a task, and (2) <b>&lt;AggregatorT&gt;</b>, which takes the user-specified data type for an aggregator to be introduced <a href="#Lagg">later</a>.
+</p>
+
+<p class="icdeparagraph">
+There are two virtual functions for users to implement in their subclass of <b>Comper</b>, which we call as UDFs (user-defined functions). The first UDF is <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Comper.h#L66" target="_blank">task_spawn(v)</a>, which takes a pointer to a vertex <i>v</i> as input and creates initial tasks from <i>v</i> properly. Recall that each worker/machine loads a portion of vertices at the beginning, and the input to task_spawn(.) is a pointer to a vertex loaded in the local machine.
+</p>
+
+<p class="icdeparagraph">
+The second UDF is <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Comper.h#L68" target="_blank">compute(.)</a> defined as follows:
+</p>
+
+<pre><code class="language-cpp">bool compute(SubgraphT & g, ContextT & context, vector&lt;VertexT *&gt; & frontier);
+</code></pre>
+
+<p class="icdeparagraph">
+The function indicates how to compute a task for one iteration, where <i>g</i> and <i>context</i> are the task's subgraph and context fields, respectively. If the task pulled vertices <i>v<sub>i1</sub></i>, <i>v<sub>i2</sub></i>, ..., <i>v<sub>ik</sub></i> in the previous iteration, these vertex objects will be cached at the local machine before the current iteration of compute(.), and compute(.)'s 3rd input argument <b>frontier</b> is an array of pointers to the vertex objects <i>v<sub>i1</sub></i>, <i>v<sub>i2</sub></i>, ..., <i>v<sub>ik</sub></i> (the order of the pull-requests is preserved). The UDF also returns a boolean value, where <i>true</i> indicates that another iteration of calling compute(.) is needed, and <i>false</i> indicates that the task is finished.
+</p>
+
+<p class="icdeparagraph">
+Inside both UDFs task_spawn(.) and compute(.), one may (T1) <u>generate new tasks and add them to the comper's task queue</u>, (T2) <u>pull vertices for use in the next iteration</u>, (T3) <u>get the aggregator to obtain the aggregated data or provide a data to the aggregator</u>, (T4) <u>output something to the output file(s)</u>.
+</p>
+
+<p class="icdeparagraph">
+<b>(T1)</b> Task's function <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Comper.h#L248" target="_blank">add_task(t)</a> takes a pointer to a task object as input, and appends the object to the comper's task queue. One may call it in both UDFs task_spawn(.) [<a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L100" target="_blank">example</a>] and, in the case of recursive task splitting, compute(.) [<a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L174" target="_blank">example</a>].
+</p>
+
+<p class="icdeparagraph">
+<b>(T2)</b> The UDF task_spawn(<i>v</i>) generates task(s) from a vertex <i>v</i>. In the function, users typically use the C++ <b>"new"</b> operator to create a new task object in the heap [<a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L93" target="_blank">example</a>], set its fields properly including pulling vertices for use in next iteration [<a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L98" target="_blank">example</a>], and then call add_task(t) to add it to the comper's task queue [<a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L100" target="_blank">example</a>]. 
+</p>
+
+<p class="icdeparagraph">
+We remark that we only require users to "new" tasks, and once its pointer is tracked by the system using add_task(.), the system will automatically garbage collect it (see <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Comper.h#L223" target="_blank">here</a>, <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Comper.h#L263" target="_blank">here</a> and <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Comper.h#L289" target="_blank">here</a>) and there is no concern of memory leak. In contrast, if you do not call add_task(.) to add your created task, you need to delete it by yourself [<a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L176" target="_blank">example</a>].
+</p>
+
+<p class="icdeparagraph">
+The UDF compute(.) actually works on a task (see <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Comper.h#L81" target="_blank">here</a>), and Comper's function <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Comper.h#L72" target="_blank">pull(v)</a> actually calls the current task's function pull(<i>v</i>). Therefore, in compute(.), one may directly call pull(<i>v</i>) to let the current task request for vertex <i>v</i> [<a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_gmatch/run.cpp#L369" target="_blank">example</a>].
+</p>
+
+<p class="icdeparagraph">
+<b>(T3)</b> We illustrate the need of aggregator using our <i>Maximum Clique Finding</i> application <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp" target="_blank">here</a>, where the aggregator keeps the current maximum clique found up-to-date. In task_spawn(<i>v</i>), if <i>v</i> includes all its neighbors into its subgraph and the subgraph is still not larger than the current maximum clique, no task needs to be spawned. Here, <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L90" target="_blank">Line 90</a> copies the current maximum clique from the aggregator <i>agg</i> (obtained at <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L88" target="_blank">Line 88</a> using Comper::get_aggregator()) to variable <i>Qmax</i>, and <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L91" target="_blank">Line 91</a> performs the above pruning.
+</p>
+
+<p class="icdeparagraph">
+Similarly, in the UDF compute(.), <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L140" target="_blank">Lines 140-142</a> obtains the current maximum clique, which is used for pruning at <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L181" target="_blank">Line 172</a> and <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L192" target="_blank">Line 192</a>. When a larger clique is found, it is provided to the aggregator at <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L211" target="_blank">Line 211</a> using the aggregator's aggregate(.) function.
+</p>
+
+<p class="icdeparagraph">
+<b>(T4)</b> Each comper also maintains an output file stream <b>fout</b> (defined <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Comper.h#L84" target="_blank">here</a>), and you can use "fout >> " to output anything in the UDFs, such as a qualified subgraph found by a task, or the task processing time. More details on "fout" such as the file path can be found in the next part describing the <i>Worker</i> class.
+</p>
+
+<h3 id="Lworker" class="entry-title">Worker</h3>
+
+<p class="icdeparagraph">
+The <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Worker.h" target="_blank">Worker</a> class provides the abstraction of the process running on a machine, which manages multiple comper threads (see <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Worker.h#L83" target="_blank">here</a>). The Worker class takes the user-specified Comper subclass in its template argument <b>&lt;Comper&gt;</b>, and inherits from it the other data types such as that of aggregator (see <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Worker.h#L43" target="_blank">here</a>).
+</p>
+
+<p class="icdeparagraph">
+The Worker class also provides two UDFs for users to implement in their subclass: (1) <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Worker.h#L146" target="_blank">toVertex(line)</a> as shown below, which indicates how to parse a line of the input data on HDFS into a vertex object.
+</p>
+
+<pre><code class="language-cpp">virtual VertexT* toVertex(char* line);
+</code></pre>
+
+<p class="icdeparagraph">
+An example of implementation can be found <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L147" target="_blank">here</a>. (2) <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Worker.h#L284" target="_blank">task_spawn(v, task_collector)</a> as shown below, which is used to generate task(s) from vertex <i>v</i> and to append them to <i>task_collector</i>.
+</p>
+
+<pre><code class="language-cpp">virtual void task_spawn(VertexT * v, vector<TaskT> & task_collector);
+</code></pre>
+
+<p class="icdeparagraph">
+This function mirrors <b>Comper::task_spawn(<i>v</i>)</b> described before, but is used by a worker to collect a batch of spawned tasks into <i>task_collector</i> for sending to another worker for load balancing (i.e. work stealing).
+</p>
+
+<p class="icdeparagraph">
+The difference in UDF implementation is that, in <b>Comper::task_spawn(<i>v</i>)</b>, after a task is generated, it is added to the comper's task queue by calling add_task(.); in contrast, in <b>Worker::task_spawn(<i>v</i>, <i>task_collector</i>)</b>, a generated task is appended to <i>task_collector</i>. See <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L84" target="_blank">here</a> and <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L162" target="_blank">here</a> for a comparison.
+</p>
+
+<p class="icdeparagraph">
+There are two important directories <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/util/global.h#L173" target="_blank">TASK_DISK_BUFFER_DIR</a> and <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/util/global.h#L174" target="_blank">REPORT_DIR</a>. Recall that each comper will spill tasks to its local disk if the comper's task queue becomes full, and these tasks are spilled under the directory TASK_DISK_BUFFER_DIR. Also recall that each comper maintains an output file stream <b>fout</b>, and the corresponding output file is REPORT_DIR/{worker_id}_{comper_id}.
+</p>
+
+<p class="icdeparagraph">
+The default path of <b>TASK_DISK_BUFFER_DIR</b> (resp. <b>REPORT_DIR</b>) is "buffered_tasks" (resp. "report"), a folder under the same path where your program locates. They are specified in the Worker class's <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Worker.h#L95" target="_blank">constructor</a> and you may specify them as other paths when creating the worker. The 1st argument of the constructor is mandatory, and indicates how many compers each worker runs.
+</p>
+
+<p class="icdeparagraph">
+We recommend the paths to be on a locally mounted disk, rather than a shared NFS (network file system). Otherwise, the disk IO of all compers is sharing the limited bandwidth of the same disk. REPORT_DIR can be set on NFS if the volume of output is small, so that the folder contains all the output files; otherwise, the output can be collected from folder REPORT_DIR of every machine (e.g., using scp) after the job is finished.
+</p>
+
+<p class="icdeparagraph">
+To run a job, one needs to create a Worker object, set its Aggregator and Trimmer objects (to be described soon) properly using functions <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Worker.h#L115" target="_blank">setAggregator(.)</a> and <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Worker.h#L87" target="_blank">setTrimmer(.)</a> (if applicable), and then call the <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Worker.h#L525" target="_blank">run(param)</a> function to start the job (where <b><i>param</i></b> contains the input data path on HDFS). See the <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L178" target="_blank">main()</a> function of our <i>Triangle Counting</i> application for an example. 
+</p>
+
+<h3 id="Ltrim" class="entry-title">Trimmer</h3>
+
+<p class="icdeparagraph">
+If users want to preprocess the adjacency list of each loaded vertex, they may define a trimmer object, whose type is a subclass of the <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Trimmer.h" target="_blank">Trimmer</a> class. Users need to implement the UDF <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Trimmer.h#L23" target="_blank">trim(v)</a> to preprocess the vertex object <i>v</i>, and see <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L32" target="_blank">here</a> for an example that trims those vertices in <i>v</i>'s adjacency list whose IDs are smaller than <i>v</i>.
+</p>
+
+<p class="icdeparagraph">
+After defining the Trimmer subclass, and before calling <b>Worker::run(param)</b> to start the job, one needs to associate a trimmer object with the worker to run. See <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L266" target="_blank">Lines 266 and 269</a> of our <i>Maximum Clique Finding</i> application for an example.
+</p>
+
+<h3 id="Lagg" class="entry-title">Aggregator</h3>
+
+<p class="icdeparagraph">
+Users may also aggregate results computed by tasks, and get the current aggregated result during task processing. This is achieved by subclassing the <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Aggregator.h" target="_blank">Aggregator</a> class to specify the aggregating logic.
+</p>
+
+<p class="icdeparagraph">
+The Aggregator class has three template arguments: <b>&lt;ValueT&gt;</b>, <b>&lt;PartialT&gt;</b> and <b>&lt;FinalT&gt;</b>, which we explain next. Each worker/machine maintains a local aggregator object. Users may aggregate a data of type <b>&lt;ValueT&gt;</b> to the local aggregator, which updates the local aggregator's status of type <b>&lt;PartialT&gt;</b>. Every <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/util/global.h#L58" target="_blank">AGG_SYNC_TIME_GAP</a> microseconds (1 second by default), the statuses of local aggregators are synchronized to obtain a global status of type <b>&lt;FinalT&gt;</b>.
+</p>
+
+<p class="icdeparagraph">
+The Aggregator class provides 6 UDFs, which are shown below along with their semantics:
+</p>
+<pre><code class="language-cpp">//how to initiate the fields of an aggregator object
+//usually called at the very beginning of a job
+virtual void init();
+
+//usually called in Comper::compute(.)
+//to aggregate value "context" to the aggregator
+virtual void aggregate_udf(ValueT & context);
+
+//called when local aggregators synchronize their statuses
+//worker 0 gathers statuses of workers 1, 2, ..., and
+//calls stepFinal_udf(.) once using each received status as input
+virtual void stepFinal_udf(PartialT & part);
+
+//returns the status of the current local aggregator
+//called by workers 1, 2, ...
+virtual void finishPartial_udf(PartialT & collector);
+
+//returns the global status obtained by synchronization
+//called by worker 0
+virtual void finishFinal_udf(FinalT & collector);
+
+//the input is the global status obtained by synchronization
+//init_udf(.) is called after each synchronization
+//to update the local aggregator's status if necessary
+virtual void init_udf(FinalT & prev);
+</code></pre>
+
+<p class="icdeparagraph">
+For example, <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L43" target="_blank">this aggregator</a> maintains the current maximum clique. It maintains a field <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L46" target="_blank">Q_max</a> to record the current maximum clique. Note that its UDF <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L52" target="_blank">init_udf(.)</a> will update Q_max with the global maximum clique obtained by synchronization, so that a new maximum clique found on one machine can be broadcast to all machines for effective search space pruning.
+</p>
+
+<p class="icdeparagraph">
+As another example, <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L41" target="_blank">this aggregator</a> counts the number of triangles found. Each local aggregator maintains a field <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L44" target="_blank">count</a> to record the total number of triangles found at the local machine. Meanwhile, it also maintains a field <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L45" target="_blank">sum</a> to keep the summation of all local aggregators' triangle counts, which is the totally number of triangles counted by all machines so far. UDF <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L73" target="_blank">finishFinal_udf(.)</a> is called by worker 0 to return the summed triangle count, and it also prints it to the console. UDF <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_triangle/run.cpp#L54" target="_blank">init_udf(.)</a> resets field "sum" to 0 for next round of summation synchronization.
+</p>
+
+<p class="icdeparagraph">
+After the UDFs are implemented, they are not directly called in application logic (and system code), but rather their wrapper functions such as <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Aggregator.h#L43" target="_blank">aggregate(.)</a> and <a href="https://github.com/yanlab19870714/G-thinker/blob/master/system/subgraph/Aggregator.h#L59" target="_blank">finishPartial(.)</a> are called (see <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L211" target="_blank">here</a> and <a href="https://github.com/yanlab19870714/G-thinker/blob/master/app_maxclique/run.cpp#L90" target="_blank">here</a> for their use cases). These wrapper functions add locks properly to the aggregator status, so that multiple compers can access and update the aggregator status without any conflict. Meanwhile, users do not need to consider the concurrency issues when implementing Aggregator's UDFs, making it simple even for users who have no knowledge in parallel programming.
+</p>
+
+</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+</main><!-- .site-main -->
+</div><!-- .content-area -->
+
+
+
+<aside id="secondary" class="sidebar widget-area" role="complementary">
+
+<section id="text-12" class="widget widget_text">
+<h2 class="widget-title">Quick Links</h2>
+<div class="textwidget">
+<h4>
+<p><a href="system.html">Downloads</a></p>
+<p><a href="deploy.html">How to Deploy</a></p>
+<p><a href="run.html">How to Run</a></p>
+<p><a href="api.html">The Complete API</a></p>
+<p><a href="team.html" target="_blank">Contact Us</a></p>
+</h4>
+</div>
+</section>
+
+<section id="text-12" class="widget widget_text">
+<h2 class="widget-title">Sponsors</h2>
+<div class="textwidget">
+<h4>
+<input type="image" width="120" src="img/nsf.png" style="cursor:pointer" onMouseover= "this.style.opacity=0.6" onMouseout= "this.style.opacity=1" onclick ="window.open('https://nsf.gov/awardsearch/showAward?AWD_ID=1755464&HistoricalAwards=false')"/>
+<p></p>
+<input type="image" width="180" src="img/azure.png" style="cursor:pointer" onMouseover= "this.style.opacity=0.6" onMouseout= "this.style.opacity=1" onclick ="window.open('https://www.microsoft.com/en-us/research/academic-program/azure-research-award-south-bd-hub/')"/>
+<p></p>
+<input type="image" width="260" src="img/south.png" style="cursor:pointer" onMouseover= "this.style.opacity=0.6" onMouseout= "this.style.opacity=1" onclick ="window.open('https://southbdhub.wordpress.com/2017/12/04/south-hub-microsoft-team-up-to-provide-azure-credits-for-researchers/')"/>
+</h4>
+</div>
+</section>
+
+</aside><!-- .sidebar .widget-area -->
+</div><!-- .site-content -->
+
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+<nav class="main-navigation" role="navigation" aria-label="Footer Primary Menu">
+
+<div class="menu-main-container">
+<ul id="menu-main-1" class="primary-menu">
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-30 current_page_item menu-item-has-children menu-item-33" aria-haspopup="true"><a href="index.html">Home</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+  <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="index.html">G-thinker Home</a></li>
+</ul>
+</li>
+
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52" aria-haspopup="true"><a href="system.html">Downloads</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="system.html">System Code</a></li>
+  <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="toy.html">Datasets</a></li>
+  <li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="app.html">Application Code</a></li>
+</ul>
+</li>
+
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-160" aria-haspopup="true"><a href="deploy.html">Doumentation</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+	<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="deploy.html">How to Deploy</a></li>
+  <li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="run.html">How to Run</a></li>
+  <li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="manual.html">How to Program</a></li>
+  <li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="api.html">The Complete API</a></li>
+</ul>
+</li>
+
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-173" aria-haspopup="true"><a href="team.html">Team &amp; Contact</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+<ul class="sub-menu">
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="team.html">Core Team</a></li>
+  <li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="others.html">Other Contributors</a></li>
+</ul>
+</li>
+
+</ul></div>
+</nav><!-- .main-navigation -->
+			
+			
+<div class="site-info">
+	<span class="site-title"><a href="index.html" rel="home">G-thinker: A User-Friendly Parallel Graph Mining System</a></span>
+</div><!-- .site-info -->
+
+</footer><!-- .site-footer -->
+</div><!-- .site-inner -->
+</div><!-- .site -->
+
+<script type="text/javascript" src="lib/skip-link-focus-fix.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="lib/functions.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+window.twttr=(function(w){t=w.twttr||{};t._e=[];t.ready=function(f){t._e.push(f);};return t;}(window));
+/* ]]> */
+</script>
+<script type="text/javascript" id="twitter-wjs" async="" defer="" src="lib/widgets.js" charset="utf-8"></script>
+<script type="text/javascript" src="lib/wp-embed.min.js"></script>
+
+</body>
+</html>

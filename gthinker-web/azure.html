@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>G-thinker</title>
+
+<link rel="stylesheet" id="bootstrap-css-css" href="lib/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="frontend_main-css-css" href="lib/frontend_main.css" type="text/css" media="all">
+<link rel="stylesheet" id="social-icons-widget-widget-css" href="lib/social_icons_widget.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentysixteen-fonts-css" href="lib/css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="lib/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentysixteen-style-css" href="lib/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="lib/prism.css" type="text/css" media="all">
+
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="lib/js"></script>
+<script type="text/javascript" src="lib/init_map.js"></script>
+<script type="text/javascript" src="lib/frontend_main.js"></script>
+<script type="text/javascript" src="lib/prism.js"></script>
+
+<style type="text/css" id="wp-custom-css">
+
+.icdeparagraph {
+text-align: justify;
+}
+
+.site-title {
+  text-align: center;
+  margin-left: 30px;
+  vertical-align: top;
+  display: inline;
+}
+
+span.site-title {
+   margin-left: 0px;
+}
+
+div.site-branding {
+  margin-bottom: 0px !important;
+}
+
+.custom-logo-link {
+  display: inline;
+}
+
+p.site-title a {
+ font-size: 2.5rem !important;
+ font-weight: bold;
+}
+
+a[href="https://wordpress.org/"]{ visibility: hidden; }
+
+div.header-image {
+ margin-top: 0px !important;
+}
+
+#masthead {
+ padding-bottom: 37px !important;
+}
+
+div.site-info {
+ width: 385px;
+ overflow: hidden;
+ height: 25px;
+}
+
+#vicechairs {
+  width: 100%;
+  border: 0px;
+}
+
+#vicechairs tbody tr td {
+  border: 0px;
+}
+
+#vicechairs thead tr th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+#hotels {
+  width: 100%;
+  text-align: center;
+}
+
+#thhotelsname {
+  width: 40%;
+}
+
+#hotels thead tr th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+#hotels tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+}
+ul, ol{
+  padding-left: 20px !important;
+}
+
+table.sightseeing {
+  border: none;
+}
+
+table.sightseeing tr{
+  border: none;
+}
+
+table.sightseeing tr td {
+  border: none;
+}
+
+
+table.sightseeing tbody tr td{
+  text-align: center;
+}
+
+#colophon .site-info {
+  min-width: 370px;
+}
+
+ul.importantdates {
+list-style-type: none;
+}
+
+#researchpc {
+  width: 100%;
+  border: 0px;
+}
+
+
+#researchpc tbody tr td{
+  border: 0px;
+}
+
+#researchpc tbody tr td:nth-child(1) {
+  width: 35%;
+}
+
+#researchpc tbody tr td:nth-child(2) {
+  width: 65%;
+}
+
+.site-description {
+    margin-left: 160px; 
+    margin-top: -25px;
+    margin-bottom: 10px;
+}
+
+p.site-description {
+	font-size: 1.25rem;
+}
+
+#twitter-follow-3 { 
+  margin-bottom: 5px;
+}
+
+#text-11 {
+ margin-bottom: 15px;
+}
+
+.twitter-timeline-profile {
+  max-height: 225px !important;
+  overflow: scroll;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 1280px) {    
+  p.site-title a {
+   font-size: 2.5rem !important;
+   font-weight: normal;
+ }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 800px) { 
+   .site-description {
+      display: none;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+ 
+}
+
+del{
+color : red;
+font-weight: bold;
+}
+
+.organizers{
+margin-top: 0px;
+margin-bottom: 25px;
+}
+
+h5 {
+margin-bottom: 0px !important;
+}
+
+h6 {
+	margin-bottom:5px !important;
+	font-style: normal !important;
+	line-height: 175% !important;
+}
+
+a.btn {
+    display: inline-block;
+    font-weight: bold;
+    width: auto;
+    color: #fff;
+    background-color: #02A99C;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: ease all 0.5s;
+}
+
+a.btn:hover, a.btn:focus {
+    background: #FCB027;
+    border: none;
+}
+
+</style>
+
+<script type="text/javascript" charset="utf-8" async="" src="lib/button.5f64a1a5864e1229f84c8defd65341b4.js"></script><script type="text/javascript" charset="utf-8" async="" src="lib/timeline.25e3f797ea5047ab5a8d06fd6ee7f701.js"></script><script type="text/javascript" charset="UTF-8" src="lib/common.js"></script><script type="text/javascript" charset="UTF-8" src="lib/util.js"></script><script type="text/javascript" charset="UTF-8" src="lib/stats.js"></script></head>
+
+<body class="home page-template-default page page-id-30 page-parent wp-custom-logo" data-gr-c-s-loaded="true">
+<div id="page" class="site">
+	<div class="site-inner">
+
+<header id="masthead" class="site-header" role="banner">
+	<div class="site-header-main">
+		<div class="site-branding">
+			<a href="index.html" class="custom-logo-link" rel="home" itemprop="url"><img width="120" src="img/logo.png" class="custom-logo" alt="G-thinker" itemprop="logo"></a>
+				<p class="site-title"><a href="index.html" rel="home">Think Like a Subgraph</a></p>
+				<p class="site-description">A User-Friendly Parallel Graph Mining System</a></p>
+		</div><!-- .site-branding -->
+
+<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+<div id="site-header-menu" class="site-header-menu">
+<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+<div class="menu-main-container"><ul id="menu-main" class="primary-menu">
+
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-30 current_page_item menu-item-has-children menu-item-33" aria-haspopup="true"><a href="index.html">Home</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+  <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="index.html">G-thinker Home</a></li>
+</ul>
+</li>
+
+<li id="menu-item-173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-173" aria-haspopup="true"><a href="system.html">Downloads</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="system.html">System Code</a></li>
+	<li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="toy.html">Datasets</a></li>
+	<li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="app.html">Application Code</a></li>
+</ul>
+</li>
+
+<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52" aria-haspopup="true"><a href="deploy.html">Doumentation</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+	<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="deploy.html">How to Deploy</a></li>
+	<li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="run.html">How to Run</a></li>
+	<li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="manual.html">How to Program</a></li>
+  <li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="api.html">The Complete API</a></li>
+</ul>
+</li>
+
+<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-62" aria-haspopup="true"><a href="team.html">Team &amp; Contact</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="team.html">Core Team</a></li>
+	<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="others.html">Other Contributors</a></li>
+</ul>
+</li>
+
+</ul></div>
+
+</nav><!-- .main-navigation -->
+</div><!-- .site-header-menu -->
+</div><!-- .site-header-main -->
+
+</header><!-- .site-header -->
+
+
+
+
+<div id="content" class="site-content">
+<div id="primary" class="content-area">
+<main id="main" class="site-main" role="main">
+		
+<article id="post-30" class="post-30 page type-page status-publish hentry">
+
+<p class="icdeparagraph">
+Other Documentations: [<a href="deploy.html">How to deploy</a>], [<a href="run.html">How to Run</a>], [<a href="manual.html">How to Program</a>], [<a href="api.html">The Complete API</a>]
+</p>
+
+<header class="entry-header"><h1 class="entry-title">Part I: Azure Virtual Machines</h1></header><!-- .entry-header -->
+
+<div class="entry-content">
+
+<p class="icdeparagraph">
+We now introduce how to create virtual machines (VMs) on Microsoft Azure. Once the machines are created, you may follow [<a href="deploy.html">note for deployment</a>] to set up the cluster environment for running G-thinker.
+</p>
+
+<p class="icdeparagraph">
+Here, we show how to create a virtual machine with hostname <b>master</b> on Azure. Go to your <a href="https://portal.azure.com" target="_blank">Azure portal</a>:
+</p>
+
+<p class="icdeparagraph">
+<img src="img/1.png" width="400"/>
+</p>
+
+<p class="icdeparagraph">
+Click <font color="#4283f4">"Create a resource"</font> as shown above.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/2.png" width="600"/>
+</p>
+
+<p class="icdeparagraph">
+Type <font color="#4283f4">"centos"</font> in the search bar.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/3.png" width="400"/>
+</p>
+
+<p class="icdeparagraph">
+Select <font color="#4283f4">"CentOS-based 7.4"</font> in the search results shown above.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/4.png" width="300"/>
+</p>
+
+<p class="icdeparagraph">
+Press the <font color="#4283f4">[Create]</font> button shown above.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/5.png" width="600"/>
+</p>
+
+<p class="icdeparagraph">
+As shown in the figure above, in Step 1, we set our machine's hostname as <b>master</b>, user name as <b>yanlab</b>, authentication type as <b>Password</b> and provide the password for user <b>yanlab</b>. Make sure that all your VMs to be included in a cluster are using the same existing <font color="#4283f4">"resource group"</font>.
+
+Press button <font color="#4283f4">[OK]</font> when done.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/6.png" width="600"/>
+</p>
+
+<p class="icdeparagraph">
+In Step 2, choose a VM model you want to create, and then click the <font color="#4283f4">[Select]</font> button.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/7.png" width="500"/>
+</p>
+
+<p class="icdeparagraph">
+In Step 3, choose to use <font color="#4283f4">"managed disks"</font> for your VM. There is a default OS disk of size 31 GB (/dev/sda), and we will add and mount a data disk later. Then click the <font color="#4283f4">[OK]</font> button.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/8.png" width="600"/>
+</p>
+
+<p class="icdeparagraph">
+Click the <font color="#4283f4">[Create]</font> button for Step 4, and the VM will start its creation. It will take a while, but you can create other VMs in the meanwhile. After the VM is ready, you can click it in the <b>Dashboard</b>:
+</p>
+
+<p class="icdeparagraph">
+<img src="img/9.png" width="800"/>
+</p>
+
+<p class="icdeparagraph">
+Click the <font color="#4283f4">[Connect]</font> button in the prompted window as shown above, and you will get the command to connect through terminal (e.g., <font color="#4283f4">ssh yanlab@52.234.212.61</font> in the figure above).
+</p>
+
+<p class="icdeparagraph">
+When you deploy your cluster, please use the internal IP address obtained from <b>ifconfig</b> (e.g., <font color="#4283f4">10.0.0.11</font>) rather than the public IP address of your VM (e.g., <font color="#4283f4">52.234.212.61</font>) in /etc/hosts.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/10.png" width="500"/>
+</p>
+
+<p class="icdeparagraph">
+Now, click <b>master</b> in the Azure Portal Dashboard, and add a disk of size 512GB.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/11.png" width="500"/>
+</p>
+
+<p class="icdeparagraph">
+Click <font color="#4283f4">[Save]</font> to confirm.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/12.png" width="600"/>
+</p>
+
+<p class="icdeparagraph">
+Now in the terminal where you already ssh-ed to <b>master</b>, run <b>df -h</b> and you cannot find that disk yet.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/13.png" width="400"/>
+</p>
+
+<p class="icdeparagraph">
+We mount the disk as follows. First, run <b>sudo fdisk -l</b> and we see that <b>/dev/sdc</b> contains the added 500GB disk space:
+</p>
+
+<p class="icdeparagraph">
+<img src="img/14.png" width="500"/>
+</p>
+
+<p class="icdeparagraph">
+We now partition <b>/dev/sdc</b> by running <b>sudo fdisk /dev/sdc</b>. You may delete all existing partitions using "d" first.
+</p>
+
+<p class="icdeparagraph">
+<img src="img/15.png" width="500"/>
+</p>
+
+<p class="icdeparagraph">
+In this way, we created <b>/dev/sdc1</b> to span all 500GB disk space:
+</p>
+
+<p class="icdeparagraph">
+<img src="img/16.png" width="400"/>
+</p>
+
+<p class="icdeparagraph">
+Format <b>/dev/sdc1</b> by running: <b>sudo mkfs.xfs /dev/sdc1</b>. Create a new folder to mount it:
+</p>
+
+<p class="icdeparagraph">
+<img src="img/17.png" width="400"/>
+</p>
+
+Finally, you may let users access it by running <b>sudo chmod 777 /data</b>.
+
+</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+</main><!-- .site-main -->
+</div><!-- .content-area -->
+
+
+
+<aside id="secondary" class="sidebar widget-area" role="complementary">
+
+<section id="text-12" class="widget widget_text">
+<h2 class="widget-title">Quick Links</h2>
+<div class="textwidget">
+<h4>
+<p><a href="system.html" target="_blank">Downloads</a></p>
+<p><a href="deploy.html">How to Deploy</a></p>
+<p><a href="run.html">How to Run</a></p>
+<p><a href="manual.html">How to Program</a></p>
+<p><a href="api.html">The Complete API</a></p>
+<p><a href="team.html" target="_blank">Contact Us</a></p>
+</h4>
+</div>
+</section>
+
+<section id="text-12" class="widget widget_text">
+<h2 class="widget-title">Sponsors</h2>
+<div class="textwidget">
+<h4>
+<input type="image" width="120" src="img/nsf.png" style="cursor:pointer" onMouseover= "this.style.opacity=0.6" onMouseout= "this.style.opacity=1" onclick ="window.open('https://nsf.gov/awardsearch/showAward?AWD_ID=1755464&HistoricalAwards=false')"/>
+<p></p>
+<input type="image" width="180" src="img/azure.png" style="cursor:pointer" onMouseover= "this.style.opacity=0.6" onMouseout= "this.style.opacity=1" onclick ="window.open('https://www.microsoft.com/en-us/research/academic-program/azure-research-award-south-bd-hub/')"/>
+<p></p>
+<input type="image" width="260" src="img/south.png" style="cursor:pointer" onMouseover= "this.style.opacity=0.6" onMouseout= "this.style.opacity=1" onclick ="window.open('https://southbdhub.wordpress.com/2017/12/04/south-hub-microsoft-team-up-to-provide-azure-credits-for-researchers/')"/>
+</h4>
+</div>
+</section>
+
+</aside><!-- .sidebar .widget-area -->
+</div><!-- .site-content -->
+
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+<nav class="main-navigation" role="navigation" aria-label="Footer Primary Menu">
+
+<div class="menu-main-container">
+<ul id="menu-main-1" class="primary-menu">
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-30 current_page_item menu-item-has-children menu-item-33" aria-haspopup="true"><a href="index.html">Home</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+  <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="index.html">G-thinker Home</a></li>
+</li>
+
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52" aria-haspopup="true"><a href="system.html">Downloads</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="system.html">System Code</a></li>
+  <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="toy.html">Datasets</a></li>
+  <li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="app.html">Application Code</a></li>
+</ul>
+</li>
+
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-160" aria-haspopup="true"><a href="deploy.html">Doumentation</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+
+<ul class="sub-menu">
+	<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="deploy.html">How to Deploy</a></li>
+  <li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="run.html">How to Run</a></li>
+  <li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="manual.html">How to Program</a></li>
+  <li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="api.html">The Complete API</a></li>
+</ul>
+</li>
+
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-173" aria-haspopup="true"><a href="team.html">Team &amp; Contact</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+<ul class="sub-menu">
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="team.html">Core Team</a></li>
+  <li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="others.html">Other Contributors</a></li>
+</ul>
+</li>
+
+</ul></div>
+</nav><!-- .main-navigation -->
+			
+			
+<div class="site-info">
+	<span class="site-title"><a href="index.html" rel="home">G-thinker: A User-Friendly Parallel Graph Mining System</a></span>
+</div><!-- .site-info -->
+
+</footer><!-- .site-footer -->
+</div><!-- .site-inner -->
+</div><!-- .site -->
+
+<script type="text/javascript" src="lib/skip-link-focus-fix.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="lib/functions.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+window.twttr=(function(w){t=w.twttr||{};t._e=[];t.ready=function(f){t._e.push(f);};return t;}(window));
+/* ]]> */
+</script>
+<script type="text/javascript" id="twitter-wjs" async="" defer="" src="lib/widgets.js" charset="utf-8"></script>
+<script type="text/javascript" src="lib/wp-embed.min.js"></script>
+
+</body>
+</html>
