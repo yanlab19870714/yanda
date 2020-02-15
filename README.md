@@ -1,4 +1,4 @@
-# Why this Webpage?
+# Why this website?
 
 From 2020, UAB would like to use a uniform website format for branding purpose: https://sites.uab.edu/
 
